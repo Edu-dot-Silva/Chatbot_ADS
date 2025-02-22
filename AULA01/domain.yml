@@ -1,0 +1,40 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - pedido_comida
+  - status
+  - id_pedido
+  - agradecimento
+  #intençoes que estaram no bot
+
+entities:
+# entidades
+  - sabor
+  - num_pedido
+
+
+responses:
+  utter_saudacao:
+  - text: "Olá, seja bem vindo! Descreva seu pedido por favor ou me diga o que deseja 😃"
+  - text: "Oi, me informe o seu pedido para que eu possa registra-lo. Se não quiser fazer um pedido me fale o que deseja 😄"
+
+  utter_pedido_comida:
+  - text: "Feito! seu pedido foi devidamente registrado no codigo XYZ e logo será enviado para você. 🛵"
+
+  utter_status:
+  - text: "Você poderia me informar o codigo do seu pedido?"
+
+  utter_id_pedido:
+  - text: "Ai já é com o motoboy, chefe!"
+
+  utter_agradecimento:
+  - text: "De nada, chefia"
+  - text: "Obrigado e conte conosco"
+  
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,11 @@
+version: "3.1"
+
+rules:
+
+- rule: Agradecimento
+  steps:
+  - intent: agradecimento
+  - action: utter_agradecimento
+
+  # se em algum momento o usuario agradecer ele chama o agradecimento do chat
+

@@ -1,0 +1,90 @@
+version: "3.1"
+
+nlu:
+
+- regex: num_pedido
+  examples: |
+    - \d{5}
+
+
+- intent: saudacao
+  examples: |
+    - hey
+    - ola
+    - oi
+    - boa tarde
+    - bom dia
+    - boa noite
+    - opa
+    - fala meu chapa
+    - eae
+    - opa, tudo bem?
+    - e ai, beleza?
+    - eae chefe
+    - oi, como vai
+    - salve, meu consagrado
+    - bom dia, tudo bem?
+    - eae blz?
+
+
+
+- intent: pedido_comida
+  examples: |
+    - Quero uma pizza de [calabresa](sabor)
+    - Gostaria de pedir uma pizza de [atum]
+    - Gostaria de pedir uma pizza de [frango com catupiry](sabor)
+    - Gostaria de pedir uma pizza de [marguerita](sabor)
+
+
+- intent: status
+  examples: |
+    - qual o status do meu pedido
+    - meu pedido ainda nao chegou?
+    - Cade a minha pizza?
+    - Onde esta meu pedido
+    - Pode me dizer onde esta minha casa
+    - Pq minha pizza ainda nao chegou
+
+- intent: id_pedido
+  examples: |
+    - O numero do meu pedido é [12345](num_pedido)
+    - Meu pedido é o 46542
+    - O numero é 78329
+    - 89372
+    - Claro o pedido é 78792
+    - N: 87594
+
+- intent: agradecimento
+  examples: |
+    - obrigado
+    - obg
+    - valeu
+    - vlw
+    - tmj
+    - satisfação
+    - voce e fera
+    - valeu pela ajuda
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
