@@ -2,6 +2,22 @@ version: "3.1"
 
 nlu:
 
+- lookup: sabor
+  examples: |
+    - calabresa
+    - mussarela
+    - calabresa
+    - atum
+    - frango com catupiry
+    - marguerita
+    - quatro queijos
+    - peperoni
+    - portuguesa
+    - frango com milho
+    - bacalhau
+    - napolitana
+    - vegetariana
+
 - regex: num_pedido
   examples: |
     - \d{5}
@@ -31,9 +47,9 @@ nlu:
 - intent: pedido_comida
   examples: |
     - Quero uma pizza de [calabresa](sabor)
-    - Gostaria de pedir uma pizza de [atum]
-    - Gostaria de pedir uma pizza de [frango com catupiry](sabor)
-    - Gostaria de pedir uma pizza de [marguerita](sabor)
+    - Gostaria de pedir uma pizza de atum
+    - Gostaria de pedir uma pizza de frango com catupiry
+    - Gostaria de pedir uma pizza de marguerita
 
 
 - intent: status
