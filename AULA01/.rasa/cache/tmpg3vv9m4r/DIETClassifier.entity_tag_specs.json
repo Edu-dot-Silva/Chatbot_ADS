@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-num_pedido",
+      "2": "I-num_pedido",
+      "3": "L-num_pedido",
+      "4": "U-num_pedido",
+      "5": "B-sabor",
+      "6": "I-sabor",
+      "7": "L-sabor",
+      "8": "U-sabor",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-num_pedido": 1,
+      "I-num_pedido": 2,
+      "L-num_pedido": 3,
+      "U-num_pedido": 4,
+      "B-sabor": 5,
+      "I-sabor": 6,
+      "L-sabor": 7,
+      "U-sabor": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

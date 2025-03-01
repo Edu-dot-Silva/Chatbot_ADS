@@ -13,6 +13,25 @@ entities:
   - sabor
   - num_pedido
 
+# slots sao para armazenar dados da mensagem que foi enviada ao chat,uma especie de variavel
+# para salvar num banco de dados é necessario um slot
+slots:
+  pedido_pizza:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: sabor
+    # o mapeamento registra de onde vira esse dados no caso vira da entidade de sabor
+
+  num_pedido_cliente:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: num_pedido
+
+
 
 responses:
   utter_saudacao:
@@ -20,20 +39,17 @@ responses:
   - text: "Oi, me informe o seu pedido para que eu possa registra-lo. Se não quiser fazer um pedido me fale o que deseja 😄"
 
   utter_pedido_comida:
-  - text: "Feito! seu pedido foi devidamente registrado no codigo XYZ e logo será enviado para você. 🛵"
+  - text: "Feito! seu pedido {pedido_pizza} foi devidamente registrado no codigo XYZ e logo será enviado para você. 🛵"
 
   utter_status:
   - text: "Você poderia me informar o codigo do seu pedido?"
 
   utter_id_pedido:
-  - text: "Ai já é com o motoboy, chefe!"
+  - text: "Seu pedido {num_pedido_cliente} ja esta a caminho!"
 
   utter_agradecimento:
   - text: "De nada, chefia"
   - text: "Obrigado e conte conosco"
-  
-
-
 
 session_config:
   session_expiration_time: 60
