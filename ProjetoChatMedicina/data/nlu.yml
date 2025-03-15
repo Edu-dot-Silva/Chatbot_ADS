@@ -3,89 +3,75 @@ version: "3.1"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - oi
+    - olá
+    - e aí
+    - tudo bem?
+    - como vai?
+    - bom dia
+    - boa tarde
+    - boa noite
+    - fala aí
+    - salve
+    - como está?
+    - como você está?
+    - tudo certo?
+    - tudo tranquilo?
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - até logo
+    - até mais
+    - até breve
+    - tchau
+    - falou
+    - até a próxima
+    - até já
+    - até mais tarde
+    - nos vemos depois
+    - adeus
+    - boa noite
+    - tenha um bom dia
+    - tenha uma boa tarde
+    - tenha uma boa noite
+    - até amanhã
+    - até semana que vem
+    - até outro dia
+    - fui
+    - valeu
+    - até mais ver
+    - até nunca mais (brincadeira)
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
 
-- intent: deny
+- intent: agendar_consulta
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - Quero agendar uma consulta
+    - Preciso marcar uma consulta
+    - Como faço para agendar uma consulta?
+    - Gostaria de marcar uma consulta médica
+    - Quero marcar uma consulta com o médico
+    - Posso agendar uma consulta agora?
+    - Agendar consulta
+    - Marcar consulta
 
-- intent: mood_great
+- intent: triagem_sintomas
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Estou com dor de cabeça, o que pode ser?
+    - Tenho febre, o que devo fazer?
+    - Estou com sintomas leves, pode me ajudar?
+    - Estou com tosse, é grave?
+    - Tenho dor no corpo, o que pode ser?
+    - Estou com sintomas de gripe, o que faço?
+    - Pode me ajudar com meus sintomas?
+    - Estou com dor, o que devo fazer?
 
-- intent: mood_unhappy
+- intent: orientacao_pre_pos_operatoria
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Quais cuidados devo tomar antes da cirurgia?
+    - O que preciso fazer antes da operação?
+    - Quais são as orientações pré-operatórias?
+    - Como devo me preparar para a cirurgia?
+    - Quais cuidados devo ter após a cirurgia?
+    - O que preciso fazer no pós-operatório?
+    - Quais são as recomendações após a operação?
+    - Como cuidar dos pontos após a cirurgia?
