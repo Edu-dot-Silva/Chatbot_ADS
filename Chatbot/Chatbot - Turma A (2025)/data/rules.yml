@@ -1,0 +1,14 @@
+version: "3.1"
+
+rules:
+
+- rule: Agradecimento
+  steps:
+  - intent: agradecimento
+  - action: utter_agradecimento
+
+- rule: Erro de Classificação da Intenção
+  steps:
+  - intent: nlu_fallback
+  - action: utter_reformular  
+

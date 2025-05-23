@@ -1,0 +1,40 @@
+version: "3.1"
+
+stories:
+
+- story: Pedido de Pizza
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: usuario_pedido_pizza
+  - checkpoint: fim_saudacao
+  - action: dados_pedido_forms
+  - active_loop: dados_pedido_forms
+  - action: action_descricao_pedido
+  - checkpoint: fim_dados_pedido
+
+- story: Confirmação do Pedido
+  steps:
+  - checkpoint: fim_dados_pedido
+  - intent: afirmacao
+  - action: utter_finalizacao_pedido
+
+- story: Pedido com erro
+  steps:
+  - checkpoint: fim_dados_pedido
+  - intent: negacao
+  - action: action_resetar_slots
+  - checkpoint: fim_saudacao  
+
+- story: Status do Pedido
+  steps:
+  - intent: status
+  - action: utter_status
+  - intent: id_pedido
+    entities:
+    - num_pedido: '45698'
+  - slot_was_set:
+    - num_pedido_cliente: '45698'
+  - action: utter_id_pedido
+
+

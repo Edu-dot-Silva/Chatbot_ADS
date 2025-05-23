@@ -1,0 +1,196 @@
+version: "3.1"
+
+nlu:
+
+- lookup: sabor
+  examples: |
+    - calabresa
+    - atum
+    - frango com catupiry
+    - frango
+    - marguerita
+    - portuguesa
+    - peperoni
+    - milho
+    - mussarela
+    - quatro queijos
+    - 4 queijos
+    - chocolate
+    - vegetariana
+    - 3 queijos
+    - tres queijos
+    - três queijos
+    - baiana
+    - marguerita
+    - margherita
+    - portuguesa
+    - palmito
+    - brócolis com bacon
+    - toscana
+    - carne seca
+    - rúcula com tomate seco
+    - rucula com tomate seco
+    - strogonoff de frango
+
+- regex: num_pedido
+  examples: |
+    - \d{5}
+
+- intent: saudacao
+  examples: |
+    - hey
+    - olá
+    - oi
+    - boa tarde
+    - bom dia
+    - boa noite
+    - opa
+    - fala meu chapa
+    - eae
+    - opa, tudo bem?
+    - E aí, beleza?
+    - Eae chefe
+    - oi, como vai?
+    - Salve, meu consagrado
+    - bom dia, tudo bem?
+    - eae blz?
+
+- intent: descricao_pizza
+  examples: |
+    - Quero [uma](qtde_num) pizza de [beterraba](sabor)
+    - Gostaria de pedir [duas](qtde_num) pizzas de atum
+    - Manda [três](qtde_num) pizzas de frango com catupiry
+    - Me vê [quatro](qtde_num) pizza de marguerita
+    - Vou querer [1](qtde_num) pizza de portuguesa
+    - Eu quero [2](qtde_num) pizza de peperoni
+    - Eu queria [3](qtde_num) pizza de milho
+    - [4](qtde_num) pizza de atum e [5](qtde_num) de mussarela
+    - [Meia](qtde_num) calabresa e [1/2](qtde_num) atum
+    - Pode fazer [cinco](qtde_num) pizzas de quatro queijos
+    - Por favor, me traga [duas](qtde_num) pizzas de chocolate
+    - Posso pedir [uma](qtde_num) pizza vegetariana?
+    - Três pizzas, [uma](qtde_num) de 3 queijos, [uma](qtde_num) de strogonoff, e [meia](qtde_num) mussarela e [1/2](qtde_num) portuguesa
+    - Tô afim de [uma](qtde_num) pizza bahiana
+    - Manda [uma](qtde_num) pizza de calabreza pra mim
+    - Me vê uma pizza aí, [metade](qtde_num) atum, [metade](qtde_num) de palmito
+
+- intent: status
+  examples: |
+    - Qual o status do meu pedido?
+    - Meu pedido ainda não chegou!
+    - Cadê a minha pizza?
+    - Onde está o meu pedido?
+    - Ainda não recebi a minha pizza
+    - Quero saber pq o meu pedido ainda não chegou
+    - Pode me dizer, por favor, onde está a minha pizza?
+    - Quando vai chegar a minha pizza?
+    - Pq minha pizza ainda não chegou?
+    - Oq aconteceu com o meu pedido. Não chegou aqui.
+    - Já faz tempo que eu fiz meu pedido, onde está minha pizza?
+    - pq minha pizza n está aq?
+    - Minha pizza deveria ter chegado, o que houve?
+    - Meu pedido está demorando demais, cade ele?
+    - Meu pedido está com a entrega atrasada. Oq ocorreu?
+
+- intent: id_pedido
+  examples: |
+    - O número do meu pedido é o [12345](num_pedido)
+    - Meu pedido é o 65478
+    - O número é 03698
+    - 78963
+    - claro, o pedido é o 98765
+    - n: 32569
+    - pedido nº 98537
+    - num do pedido é 96325
+    - sim, é o 98563
+    - é o 65896
+    - pedido 94762
+    - O pedido foi o 98647
+    - Aqui está o nº do pedido: 32147
+    - Foi registrado no nº 36589
+
+- intent: agradecimento
+  examples: |
+    - obrigado
+    - obg
+    - valeu
+    - vlw
+    - Agradeço a sua ajuda
+    - muito obrigado
+    - tmj
+    - tamo junto
+    - satisfação
+    - você é fera
+    - valeu pela ajuda
+    - agradeço a atenção
+    - É nois
+
+- intent: afirmacao
+  examples: |
+    - Sim
+    - Sim, claro
+    - Isso mesmo
+    - Com certeza
+    - Claro
+    - Exato
+    - Correto
+    - Sim, pode ser
+    - Certamente
+    - Sim, sem dúvidas
+    - Beleza
+    - Fechado
+    - Pode deixar
+    - Ok, combinado
+    - Sim, estou de acordo
+
+- intent: negacao
+  examples: |
+    - Não
+    - De jeito nenhum
+    - Nem pensar
+    - Não mesmo
+    - Jamais
+    - Nunca
+    - De forma alguma
+    - Nem a pau
+    - Não estou de acordo
+    - Não quero
+    - Nem um pouco
+    - Não faz sentido
+    - Não aceito
+    - Nop
+    - Nada disso
+
+- intent: info_endereco
+  examples: |
+    - Moro na Rua Palmares, número 20, São Bernardo do Campo
+    - Meu endereço é Avenida João Firmino, 1320, apto 2, bloco 3, São Caetano do Sul
+    - Resido na Rua XV de Outubro, 130, Vila Oliveira, Santo André
+    - O endereço é Rua Ministro Otávio de Souza, número 12, São Paulo
+    - Fico na Avenida Príncipe de Gales, nº 1098, bloco 2, apto 26, São Paulo
+    - Minha casa fica na Avenida Kennedy, 1423, Vila dos Presidentes, São Paulo
+    - Moro na Rua Margarida, Vila das Flores, número 13, São Caetano
+    - Fico na Rua Brasil, 141, bloco 4, apto 113, Vila das Nações Unidas, São Caetano do Sul
+    - Estou na Rua Banda, 101, São Paulo
+    - O local é Rua Brasil, 141, bloco 2, apto 34, Santo André
+    - Minha residência é na Rua Jurubatuba, 101, Centro, São Bernardo do Campo
+    - Vivo na Avenida Paulista, 900, Bela Vista, São Paulo
+    - O endereço de entrega é Rua das Rosas, 77, Jardim Primavera, Campinas
+    - Fico na Rua Rio Branco, 254, Centro, Sorocaba
+    - Moro na Travessa das Palmeiras, 45, Vila Industrial, São José dos Campos
+
+- intent: usuario_pedido_pizza
+  examples: |
+    - Gostaria de pedir uma pizza
+    - Quero encomendar uma pizza
+    - Você pode anotar o meu pedido?
+    - Quero fazer um pedido
+    - Desejo pedir uma pizza
+    - Você pode me ajudar a pedir uma pizza
+    - Posso fazer um pedido?
+    - Me vê uma pizza
+    - Quero comprar uma pizza, por favor
+    - Tô com fome, quero comer uma pizza
+    - Me dá uma pizza, por favor
+    - Tem como fazer a boa pra nós?
+    - Quero fazer o pedido de sempre

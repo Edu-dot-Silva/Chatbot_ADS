@@ -1,0 +1,10 @@
+[
+  {
+    "name": "num_pedido",
+    "pattern": "\\d{5}"
+  },
+  {
+    "name": "sabor",
+    "pattern": "(\\bcalabresa\\b|\\batum\\b|\\bfrango\\ com\\ catupiry\\b|\\bfrango\\b|\\bmarguerita\\b|\\bportuguesa\\b|\\bpeperoni\\b|\\bmilho\\b|\\bmussarela\\b|\\bquatro\\ queijos\\b|\\b4\\ queijos\\b|\\bchocolate\\b|\\bvegetariana\\b|\\b3\\ queijos\\b|\\btres\\ queijos\\b|\\btrês\\ queijos\\b|\\bbaiana\\b|\\bmarguerita\\b|\\bmargherita\\b|\\bportuguesa\\b|\\bpalmito\\b|\\bbrócolis\\ com\\ bacon\\b|\\btoscana\\b|\\bcarne\\ seca\\b|\\brúcula\\ com\\ tomate\\ seco\\b|\\brucula\\ com\\ tomate\\ seco\\b|\\bstrogonoff\\ de\\ frango\\b)"
+  }
+]
